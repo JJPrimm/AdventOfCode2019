@@ -69,5 +69,18 @@ namespace AdventCode
                 { 'Z', 26 }
             };
         }
+
+        public static int[] IntToDigitArray(int i)
+        {
+            var aryLength = (int)Math.Floor(Math.Log10(i)) + 1;
+            var ary = new int[aryLength];
+
+            for (int x = 1; x <= aryLength; x++)
+            {
+                ary[aryLength - x] = i % 10;
+                i /= 10;
+            }
+            return ary;
+        }
     }
 }
