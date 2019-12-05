@@ -13,7 +13,9 @@ namespace AdventCode
             //Day3.Problem1();
             //Day3.Problem2();
             //Day4.Problem1();
-            Day4.Problem2();
+            //Day4.Problem2();
+            //Day5.Problem1();
+            Day5.Problem2();
             //Day6.Problem1();
             //Day6.Problem2();
             //Day7.Problem1();

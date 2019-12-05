@@ -70,9 +70,9 @@ namespace AdventCode
             };
         }
 
-        public static int[] IntToDigitArray(int i)
+        public static int[] IntToDigitArray(int i, int length = 0)
         {
-            var aryLength = (int)Math.Floor(Math.Log10(i)) + 1;
+            var aryLength = (length == 0) ? (int)Math.Floor(Math.Log10(i)) + 1 : length;
             var ary = new int[aryLength];
 
             for (int x = 1; x <= aryLength; x++)
