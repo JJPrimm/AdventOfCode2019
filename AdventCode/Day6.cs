@@ -83,7 +83,7 @@ namespace AdventCode
             Console.WriteLine("Day 6 - 2: Orbits Loaded");
 
             var myOrbit = orbits.FirstOrDefault(o => o.Child == "YOU");
-            var myAncestors = orbits.FirstOrDefault(o => o.Child == "YOU").GetAncestors();
+            var myAncestors = myOrbit.GetAncestors();
             var sanOrbit = orbits.FirstOrDefault(o => o.Child == "SAN");
             var sanAncestors = sanOrbit.GetAncestors();
 
