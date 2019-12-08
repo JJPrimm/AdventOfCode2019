@@ -19,9 +19,11 @@ namespace AdventCode
             //Day6.Problem1();
             //Day6.Problem2();
             //Day7.Problem1();
-            Day7.Problem2();
+            //Day7.Problem2();
+            //int[] ary = { 1, 2, 3, 4, 5 };
+            //Utilities.HeapPermutation(ary, 5, 5);
             //Day8.Problem1();
-            //Day8.Problem2();
+            Day8.Problem2();
             //Day10.Problems();
             //Day11.Problem1();
             //Day11.Problem2();

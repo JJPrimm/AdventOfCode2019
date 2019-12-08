@@ -2,11 +2,17 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 
 namespace AdventCode
 {
     public static class Utilities
     {
+        //public static string ReadString(int day)
+        //{
+        //    return ReadString
+        //}
+
         public static int[] ReadIntArray(int day)
         {
             return File.ReadAllLines($@"..\..\input\Input{day}.txt")
@@ -81,6 +87,42 @@ namespace AdventCode
                 i /= 10;
             }
             return ary;
+        }
+
+        public static void HeapPermutation(int[] a, int size, int n)
+        {
+            if (size == 1)
+            {
+                WriteContainer(a);
+            }
+
+            for (int i = 0; i < size; i++)
+            {
+                HeapPermutation(a, size - 1, n);
+                if (size % 2 == 1)
+                {
+                    int temp = a[0];
+                    a[0] = a[size - 1];
+                    a[size - 1] = temp;
+                }
+                else
+                {
+                    int temp = a[i];
+                    a[i] = a[size - 1];
+                    a[size - 1] = temp;
+                }
+            }
+        }
+
+        public static void WriteContainer(IEnumerable<int> c)
+        {
+            StringBuilder str = new StringBuilder("{");
+            foreach (int i in c)
+            {
+                str.Append($" {i}");
+            }
+            str.Append(" }");
+            Console.WriteLine(str.ToString());
         }
     }
 }
