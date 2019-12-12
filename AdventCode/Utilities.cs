@@ -130,5 +130,34 @@ namespace AdventCode
             str.Append(" }");
             Console.WriteLine(str.ToString());
         }
+
+        public static double GetAngle(double a, double o)
+        {
+            double angle;
+            if (a == 0)
+            {
+                if (o < 0)
+                {
+                    angle = 1.5 * Math.PI;
+                }
+                else
+                {
+                    angle = .5 * Math.PI;
+                }
+            }
+            else
+            {
+                angle = Math.Atan(o / a);
+                if (a < 0)
+                {
+                    angle += Math.PI;
+                }
+                else if (o < 0)
+                {
+                    angle += 2 * Math.PI;
+                }
+            }
+            return angle;
+        }
     }
 }
